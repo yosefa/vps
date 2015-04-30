@@ -1,0 +1,13 @@
+#!/bin/bash
+while read mumetndase
+do
+        AKUN="$(echo $mumetndase | cut -d: -f1)"
+        ID="$(echo $mumetndase | grep -v nobody | cut -d: -f3)"
+        exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
+        kom="$(echo $mumetndase | cut -d: -f5)"
+        if [[ $ID -ge 1000 ]]; then
+        printf "$AKUN-$exp-$kom\n"
+        fi
+done < /etc/passwd
+JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+echo "Jumlah:$JUMLAH"
