@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ -n $4 ]]; then
+tgl=`date '+%C%y/%m/%d' -d "$tambah+$4 days"`
+else
+tgl=`date '+%C%y/%m/%d' -d "$tambah+30 days"`
+fi
+useradd -c "$1" -e $tgl -d /home/$2 -m -g akun -s /bin/false $2
+echo "$2:$3" | chpasswd
+echo $tgl
+otomatis
