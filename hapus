@@ -1,0 +1,3 @@
+#!/bin/bash
+userdel $1
+rm -rf /home/$1
