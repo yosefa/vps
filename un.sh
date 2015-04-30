@@ -1,0 +1,13 @@
+rm -rf add
+rm -rf cari*
+rm -rf crot*
+rm -rf hapus*
+rm -rf lagi*
+rm -rf lihat*
+rm -rf tambah*
+rm -rf kurang*
+rm -rf trial*
+rm -rf masuk*
+rm -rf expuser*
+rm -rf otomatis*
+rm -rf bersih*
