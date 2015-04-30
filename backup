@@ -1,0 +1,15 @@
+host="$(/sbin/ifconfig | awk '
+    /inet addr/ {
+        gsub("addr:","");
+        if(($2!="127.0.0.1") && ($2!="0.0.0.0") && ($2!="") && ($2!="127.0.0.2") && ($2!="10.9.0.1") &&($2!="10.8.0.1"))
+            { print $2 };
+    }')"
+tgl=$(date +'%Y-%m-%d')
+mkdir -p /tmp/backup-config-manifests
+echo "/etc/passwd" >> /tmp/backup-config-manifests/useradmin
+echo "/etc/group" >> /tmp/backup-config-manifests/useradmin
+echo "/etc/shadow" >> /tmp/backup-config-manifests/useradmin
+echo "/etc/gshadow" >> /tmp/backup-config-manifests/useradmin
+echo "" >> /tmp/backup-config-manifests/useradmin
+tar -zcf /root/backup.tar.gz /etc/passwd /etc/shadow /etc/gshadow /etc/group /tmp/backup-config-manifests/useradmin
+mv /root/backup.tar.gz bc-"$tgl"-"$host".tar.gz
