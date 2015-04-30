@@ -1,0 +1,6 @@
+#!/bin/bash
+tgl=`date '+%C%y/%m/%d' -d "+30 days"`
+usermod -e $tgl $1
+passwd -u $1
+echo $tgl
+otomatis
