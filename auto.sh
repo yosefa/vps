@@ -1,5 +1,6 @@
 rm -rf un.sh*
 wget https://github.com/yosefa/vps/raw/master/add
+wget https://github.com/yosefa/vps/raw/master/backup
 wget https://github.com/yosefa/vps/raw/master/cari
 wget https://github.com/yosefa/vps/raw/master/crot
 wget https://github.com/yosefa/vps/raw/master/hapus
@@ -14,6 +15,7 @@ wget https://github.com/yosefa/vps/raw/master/un.sh
 wget https://github.com/yosefa/vps/raw/master/otomatis
 wget https://github.com/yosefa/vps/raw/master/bersih
 chmod +x add
+chmod +x backup
 chmod +x cari
 chmod +x crot
 chmod +x hapus
@@ -29,6 +31,7 @@ chmod +x otomatis
 chmod +x bersih
 apt-get install dos2unix
 dos2unix add
+dos2unix backup
 dos2unix cari
 dos2unix crot
 dos2unix hapus
