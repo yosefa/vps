@@ -1,4 +1,3 @@
-rm -rf un.sh*
 wget https://github.com/yosefa/vps/raw/master/add
 wget https://github.com/yosefa/vps/raw/master/backup
 wget https://github.com/yosefa/vps/raw/master/cari
