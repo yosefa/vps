@@ -14,6 +14,7 @@ wget https://github.com/yosefa/vps/raw/master/un.sh
 wget https://github.com/yosefa/vps/raw/master/otomatis
 wget https://github.com/yosefa/vps/raw/master/bersih
 wget https://github.com/yosefa/vps/raw/master/apakah
+wget https://github.com/yosefa/vps/raw/master/recrot
 chmod +x add
 chmod +x backup
 chmod +x cari
@@ -30,6 +31,7 @@ chmod +x un.sh
 chmod +x otomatis
 chmod +x bersih
 chmod +x apakah
+chmod +x recrot
 apt-get install dos2unix
 dos2unix add
 dos2unix backup
@@ -47,4 +49,5 @@ dos2unix un.sh
 dos2unix otomatis
 dos2unix bersih
 dos2unix apakah
+dos2unix recrot
 rm -rf auto.sh
