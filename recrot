@@ -1,0 +1,17 @@
+#!/bin/bash
+apa="$(netstat -ntlp | grep dropbear)";
+if [ -z "$apa" ]; then
+/etc/init.d/dropbear restart;
+fi
+apa2="$(netstat -ntlp | grep openvpn)";
+if [ -z "$apa2" ]; then
+/etc/init.d/openvpn restart;
+fi
+apa3="$(netstat -ntlp | grep squid)";
+if [ -z "$apa3" ]]; then
+/etc/init.d/squid3 restart;
+fi
+apa4="$(netstat -ntlp | grep 7300)";
+if [ -z "$apa4" ]; then
+/usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
+fi
