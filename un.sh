@@ -13,4 +13,5 @@ rm -rf otomatis*
 rm -rf bersih*
 rm -rf backup*
 rm -rf apakah*
+rm -rf recrot*
 rm -rf un.sh*
