@@ -1,0 +1,11 @@
+#!/bin/bash
+while read mumetndase
+do
+  AKUN="$(echo $mumetndase | cut -d: -f1)"
+  ID="$(echo $mumetndase | grep -v nobody | grep $1 | cut -d: -f3)"
+    if [[ $ID -ge 1000 ]]; then
+      if [[ "$AKUN" == "$1" ]]; then
+      printf "$AKUN"
+      fi
+    fi
+done < /etc/passwd
