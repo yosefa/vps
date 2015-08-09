@@ -12,3 +12,4 @@ rm -rf expuser*
 rm -rf otomatis*
 rm -rf bersih*
 rm -rf backup*
+rm -rf apakah*
